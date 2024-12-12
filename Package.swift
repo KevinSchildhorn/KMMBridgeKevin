@@ -21,11 +21,11 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: packageName,
+            name: testPackagePackageName,
             path: "./allshared/build/XCFrameworks/debug/\(testPackagePackageName).xcframework"
         ),
         .binaryTarget(
-            name: packageName,
+            name: testPackage2PackageName,
             path: "./allshared/build/XCFrameworks/debug/\(testPackage2PackageName).xcframework"
         ),
     ]
