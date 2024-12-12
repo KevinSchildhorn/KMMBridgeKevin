@@ -3,14 +3,10 @@ import PackageDescription
 
 let packageName = "allshared"
 
-// BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'analytics' (do not edit)
+// BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'allshared' (do not edit)
 let testPackagePackageName = "analytics"
-// END KMMBRIDGE BLOCK FOR 'analytics'
-
-// BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'breeds' (do not edit)
 let testPackage2PackageName = "breeds"
-// END KMMBRIDGE BLOCK FOR 'breeds'
-
+// END KMMBRIDGE BLOCK FOR 'allshared'
 
 let package = Package(
     name: packageName,
