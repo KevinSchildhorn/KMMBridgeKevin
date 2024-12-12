@@ -16,17 +16,17 @@ let package = Package(
     products: [
         .library(
             name: packageName,
-            targets: [packageName]
+            targets: [testPackagePackageName, testPackage2PackageName]
         ),
     ],
     targets: [
         .binaryTarget(
             name: testPackagePackageName,
-            path: "./allshared/build/XCFrameworks/debug/\(testPackagePackageName).xcframework"
+            path: "./\(testPackagePackageName)/build/XCFrameworks/debug/\(testPackagePackageName).xcframework"
         ),
         .binaryTarget(
             name: testPackage2PackageName,
-            path: "./allshared/build/XCFrameworks/debug/\(testPackage2PackageName).xcframework"
+            path: "./\(testPackage2PackageName)/build/XCFrameworks/debug/\(testPackage2PackageName).xcframework"
         ),
     ]
 )
