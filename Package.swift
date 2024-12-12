@@ -4,8 +4,9 @@ import PackageDescription
 let packageName = "allshared"
 
 // BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'allshared' (do not edit)
-let testPackagePackageName = "analytics"
-let testPackage2PackageName = "breeds"
+let remoteallsharedUrl = "https://api.github.com/repos/KevinSchildhorn/KMMBridgeKevin/releases/assets/212979099.zip"
+let remoteallsharedChecksum = "f63b958efa1c4597954ec73d04d3e805e3641274d05c3329a02a08ac590be559"
+let allsharedPackageName = "allshared"
 // END KMMBRIDGE BLOCK FOR 'allshared'
 
 let package = Package(
