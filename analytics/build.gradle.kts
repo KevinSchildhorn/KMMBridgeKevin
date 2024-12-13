@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kmmbridge)
     `maven-publish`
 }
 
@@ -34,4 +35,15 @@ android {
         minSdk = libs.versions.minSdk.get().toInt()
     }
     namespace = "co.touchlab.kmmbridgekickstart.analytics"
+}
+
+kmmbridge {
+    gitHubReleaseArtifacts()
+    spm(
+        swiftToolVersion = "5.8",
+        useCustomPackageFile = true,
+        perModuleVariablesBlock = true
+    ) {
+        iOS { v("14") }
+    }
 }

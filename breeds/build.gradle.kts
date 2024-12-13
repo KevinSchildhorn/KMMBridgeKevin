@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.sqlDelight)
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kmmbridge)
     `maven-publish`
 }
 
@@ -56,5 +57,16 @@ addGithubPackagesRepository()
 sqldelight {
     databases.create("KMMBridgeKickStartDb") {
         packageName.set("co.touchlab.kmmbridgekickstart.db")
+    }
+}
+
+kmmbridge {
+    gitHubReleaseArtifacts()
+    spm(
+        swiftToolVersion = "5.8",
+        useCustomPackageFile = true,
+        perModuleVariablesBlock = true
+    ) {
+        iOS { v("14") }
     }
 }
