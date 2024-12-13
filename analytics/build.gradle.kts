@@ -39,6 +39,7 @@ android {
 
 kmmbridge {
     gitHubReleaseArtifacts()
+    frameworkName = "analytics"
     spm(
         swiftToolVersion = "5.8",
         useCustomPackageFile = true,

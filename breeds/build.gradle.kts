@@ -62,6 +62,7 @@ sqldelight {
 
 kmmbridge {
     gitHubReleaseArtifacts()
+    frameworkName = "breeds"
     spm(
         swiftToolVersion = "5.8",
         useCustomPackageFile = true,
