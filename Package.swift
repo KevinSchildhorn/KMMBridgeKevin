@@ -23,7 +23,17 @@ let package = Package(
             name: packageName,
             type: .static,
             targets: [AnalyticsPackageName, BreedsPackageName]
-        )
+        ),
+        .library(
+            name: AnalyticsPackageName,
+            type: .static,
+            targets: [AnalyticsPackageName]
+        ),
+        .library(
+            name: BreedsPackageName,
+            type: .static,
+            targets: [BreedsPackageName]
+        ),
     ],
     targets: [
         .binaryTarget(
