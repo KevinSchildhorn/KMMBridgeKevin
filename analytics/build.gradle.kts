@@ -9,9 +9,15 @@ kotlin {
     androidTarget {
         publishAllLibraryVariants()
     }
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "analytics"
+        }
+    }
 
     sourceSets {
         commonMain.dependencies {
