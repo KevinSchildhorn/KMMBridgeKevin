@@ -36,15 +36,6 @@ let package = Package(
         ),
     ],
     targets: [
-        .target(
-            name: packageName,
-        ),
-        .target(
-            name: AnalyticsPackageName,
-        ),
-        .target(
-            name: BreedsPackageName,
-        ),
         .binaryTarget(
             name: AnalyticsPackageName,
             path: "./\(AnalyticsPackageName)/build/XCFrameworks/debug/\(AnalyticsPackageName).xcframework"
