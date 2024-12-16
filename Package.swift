@@ -5,14 +5,14 @@ let packageName = "KevinKMM"
 
 
 // BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'analytics' (do not edit)
-let remoteanalyticsUrl = "https://api.github.com/repos/KevinSchildhorn/KMMBridgeKevin/releases/assets/213759460.zip"
-let remoteanalyticsChecksum = "4a72e61312ec0f452b3bc1d9ec2ab3802f84c720a88a41d9c886fbdc3449ce51"
+let remoteanalyticsUrl = "https://api.github.com/repos/KevinSchildhorn/KMMBridgeKevin/releases/assets/213766056.zip"
+let remoteanalyticsChecksum = "e1c7e2664dd6b5ffbab47a467f90bd66152b9063b35d52c6977fc43d89409446"
 let analyticsPackageName = "analytics"
 // END KMMBRIDGE BLOCK FOR 'analytics'
 
 // BEGIN KMMBRIDGE VARIABLES BLOCK FOR 'breeds' (do not edit)
-let remotebreedsUrl = "https://api.github.com/repos/KevinSchildhorn/KMMBridgeKevin/releases/assets/213759628.zip"
-let remotebreedsChecksum = "5765d4edcaad720f06a8b2de24fe9777ed3da70de16e6c30a21b01be67e0233e"
+let remotebreedsUrl = "https://api.github.com/repos/KevinSchildhorn/KMMBridgeKevin/releases/assets/213767262.zip"
+let remotebreedsChecksum = "54cac6c9dabe2d783eaa3e1c1fdb4973b10506abb955508916a145541bc95c1f"
 let breedsPackageName = "breeds"
 // END KMMBRIDGE BLOCK FOR 'breeds'
 
