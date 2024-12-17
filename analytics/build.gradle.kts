@@ -42,7 +42,7 @@ android {
     }
     namespace = "co.touchlab.kmmbridgekickstart.analytics"
 }
-
+/*
 kmmbridge {
     gitHubReleaseArtifacts()
     frameworkName = "analytics"
@@ -53,4 +53,4 @@ kmmbridge {
     ) {
         iOS { v("14") }
     }
-}
+}*/
