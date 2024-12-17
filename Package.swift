@@ -26,27 +26,30 @@ let package = Package(
         .library(
             name: packageName,
             type: .static,
-            targets: [AnalyticsPackageName, BreedsPackageName]
+            targets: [analyticsPackageName, breedsPackageName]
         ),
         .library(
-            name: AnalyticsPackageName,
+            name: analyticsPackageName,
             type: .static,
-            targets: [AnalyticsPackageName]
+            targets: [analyticsPackageName]
         ),
         .library(
-            name: BreedsPackageName,
+            name: breedsPackageName,
             type: .static,
-            targets: [BreedsPackageName]
+            targets: [breedsPackageName]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: AnalyticsPackageName,
-            path: "./\(AnalyticsPackageName)/build/XCFrameworks/debug/\(AnalyticsPackageName).xcframework"
+            name: analyticsPackageName,
+            path: remoteanalyticsUrl,
+            checksum: remoteanalyticsChecksum
+
         ),
         .binaryTarget(
-            name: BreedsPackageName,
-            path: "./\(BreedsPackageName)/build/XCFrameworks/debug/\(BreedsPackageName).xcframework"
+            name: analyticsPackageName,
+            path: remotebreedsUrl,
+            checksum: remotebreedsChecksum
         ),
     ]
 )
