@@ -69,13 +69,11 @@ sqldelight {
 }
 
 kmmbridge {
-    gitHubReleaseArtifacts()
     frameworkName = "breeds"
-    spm(
-        swiftToolVersion = "5.8",
-        //useCustomPackageFile = true,
-        //perModuleVariablesBlock = true
-    ) {
-        iOS { v("14") }
-    }
+    s3PublicArtifacts(
+        "us‑east‑2",
+        "kevins-kmm-bucket",
+        System.getenv("ACCESS_KEY"),
+        System.getenv("SECRET_ACCESS_KEY")
+    )
 }
