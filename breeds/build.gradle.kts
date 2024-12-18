@@ -71,7 +71,7 @@ sqldelight {
 kmmbridge {
     frameworkName = "breeds"
     s3PublicArtifacts(
-        "us‑east‑2",
+        "us-east-2",
         "kevins-kmm-bucket",
         System.getenv("ACCESS_KEY"),
         System.getenv("SECRET_ACCESS_KEY")
