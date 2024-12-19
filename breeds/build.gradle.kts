@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kotlin.serialization)
@@ -68,12 +71,18 @@ sqldelight {
     }
 }
 
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(FileInputStream(rootProject.file("local.properties")))
+}
+
 kmmbridge {
     frameworkName = "breeds"
     s3PublicArtifacts(
         "us-east-2",
         "kevins-kmm-bucket",
-        System.getenv("ACCESS_KEY"),
-        System.getenv("SECRET_ACCESS_KEY")
+        System.getenv("ACCESS_KEY") ?: localProperties.getProperty("ACCESS_KEY"),
+        System.getenv("SECRET_ACCESS_KEY") ?: localProperties.getProperty("SECRET_ACCESS_KEY")
     )
 }
