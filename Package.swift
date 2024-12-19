@@ -13,12 +13,15 @@ let package = Package(
         .library(
             name: packageName,
             type: .static,
-            targets: [packageName,"S3"]
+            targets: [packageName]
         ),
     ],
     targets: [
         .target(
-            name: packageName
+            name: packageName,
+            dependencies: [
+                "S3",
+            ]
         ),
         .binaryTarget(
             name: "S3",
