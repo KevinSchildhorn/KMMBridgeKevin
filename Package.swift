@@ -13,10 +13,13 @@ let package = Package(
         .library(
             name: packageName,
             type: .static,
-            targets: ["S3"]
+            targets: [packageName,"S3"]
         ),
     ],
     targets: [
+        .target(
+            name: packageName
+        ),
         .binaryTarget(
             name: "S3",
             path: "https://kevins-kmm-bucket.s3.us-east-2.amazonaws.com/breeds-0.3.0-1734620579313-f439f9d1-cb20-44a6-b56e-39f214574737.xcframework.zip"
