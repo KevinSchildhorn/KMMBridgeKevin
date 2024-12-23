@@ -6,7 +6,9 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.sqlDelight)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kmmbridge)
+    //alias(libs.plugins.kmmbridge)
+    alias(libs.plugins.kmmbridge.test)
+
     `maven-publish`
 }
 
@@ -63,7 +65,7 @@ android {
 }
 
 // For publishing Android AAR files to GitHub Packages
-addGithubPackagesRepository()
+//addGithubPackagesRepository()
 
 sqldelight {
     databases.create("KMMBridgeKickStartDb") {
